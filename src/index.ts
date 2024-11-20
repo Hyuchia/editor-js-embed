@@ -140,7 +140,7 @@ export default class Embed {
     if (this.element) {
       const caption = this.element.querySelector(`.${this.api.styles.input}`) as HTMLElement;
 
-      this._data.caption = caption ? caption.innerHTML : '';
+      this.data = {...this._data, caption: caption ? caption.innerHTML : '' };
     }
 
     return this._data;
