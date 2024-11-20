@@ -219,7 +219,7 @@ class m {
   get data() {
     if (this.element) {
       const i = this.element.querySelector(`.${this.api.styles.input}`);
-      this.data = { ...this._data, caption: i ? i.innerHTML : "" };
+      this._data = { ...this._data, caption: i ? i.innerHTML : "" };
     }
     return this._data;
   }
